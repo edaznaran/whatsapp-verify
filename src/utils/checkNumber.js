@@ -30,9 +30,8 @@ async function checkNumber(phoneNumber) {
 		console.error("Error checking number:", error);
 		return false;
 	} finally {
-		if (browser) {
-			await browser.close();
-		}
+		console.log("Closing Browser");
+		await browser.close();
 	}
 }
 
