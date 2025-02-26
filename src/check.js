@@ -1,6 +1,6 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 const log = console.log;
-const checkNumber = require("./utils/checkNumber");
+import checkNumber from "./utils/checkNumber.js";
 
 (async () => {
 	if (process.argv.length < 3) {

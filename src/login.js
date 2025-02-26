@@ -1,13 +1,13 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 const log = console.log;
-const puppeteer = require("puppeteer");
+import { launch } from "puppeteer";
 
 (async () => {
 	log(
 		chalk.blue("Opening a browser window, please scan / login on Whatsapp")
 	);
 	log(chalk.yellow("Once you're logged in, you can close the page or tab"));
-	const browser = await puppeteer.launch({
+	const browser = await launch({
 		headless: false,
 		userDataDir: "./profileData",
 	});

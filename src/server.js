@@ -1,11 +1,12 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+import bodyParser from "body-parser";
+import express from "express";
+import checkNumber from "./utils/checkNumber.js";
+import checkNumberBulk from "./utils/checkNumberBulk.js";
+
 const app = express();
 app.use(bodyParser.json());
 
 // Utils
-const checkNumber = require("./utils/checkNumber");
-const checkNumberBulk = require("./utils/checkNumberBulk");
 
 // Check Single Number
 app.get("/checknumber", async (req, res) => {
